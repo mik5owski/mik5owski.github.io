@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Odbijajace sie pilki</title>
+	</head>
+	<body>
+		<canvas id="plotno" width="1420" height="766"></canvas>
+		<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+		<script>
+	function program(){
+		var liczba = prompt("Ile odbijających się piłek chcesz zobaczyć?");
+		var plotno = document.getElementById("plotno");
+		var kontekst = plotno.getContext("2d");
+		var szerokosc = plotno.width;
+		var wysokosc = plotno.height;
+		
+			
+		
+			function Pilka () {
+				this.x = szerokosc/2;
+				this.y = wysokosc/2;
+				this.xSzybkosc = Math.random()*10-5;
+				this.ySzybkosc = Math.random()*10-5;
+				var kolory = ["Red", "Orange", "GoldenRod","Green","Blue","Purple","Fuchsia","Brown","Turquiose","FireBrick"];
+				this.kolor = kolory[Math.floor(Math.random()*10)];
+			};
+			
+		var okrag = function (x, y, promien, wypelnijOkrag, kolor) {
+				
+				kontekst.beginPath();
+				kontekst.arc(x, y, promien, 0, Math.PI * 2, false);
+				if(wypelnijOkrag) {
+					kontekst.fillStyle = kolor;
+					kontekst.fill();
+				} else {
+					kontekst.stroke();
+				}
+			};
+			
+		Pilka.prototype.rysuj = function() {
+			okrag(this.x, this.y, 10, true, this.kolor);
+			
+		};
+		
+		Pilka.prototype.przesuwaj = function() {
+			this.x += this.xSzybkosc;
+			this.y += this.ySzybkosc;
+		};
+		
+		Pilka.prototype.sprawdzajKolizje = function () {
+			if (this.x < 0+10 || this.x > szerokosc-10) {
+				this.xSzybkosc = -this.xSzybkosc;
+			};
+			if (this.y <0+10 || this.y >wysokosc-10) {
+				this.ySzybkosc = -this.ySzybkosc;
+			};
+		};
+		
+		var pilka = [];
+		
+		for (i = 0; i<liczba; i++) {
+			pilka[i]= new Pilka
+		};
+			
+			var interval = setInterval(function () {
+			
+				
+				
+				kontekst.clearRect(0, 0, szerokosc, wysokosc);
+				for (i = 0; i <liczba; i++) {
+				
+					pilka[i].rysuj();
+					pilka[i].przesuwaj();
+					pilka[i].sprawdzajKolizje();
+				};
+				kontekst.strokeRect(0,0,szerokosc,wysokosc);
+			}, 10);
+			
+		$("#plotno").click(function(zdarzenie){
+			clearInterval(interval);
+			
+			program();
+		});
+			
+	};	
+	program();
+		
+		
+		</script>
+	</body>
+</html>

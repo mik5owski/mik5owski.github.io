@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Programowanie interaktywne</title>
+</head>
+<body>
+	<h1 id="naglowek">Kliknij mnie!</h1>
+	<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+	
+	<script>
+	var przesuniecieLewo = 0;
+	var przesuniecieGora = 0;
+	var kwadrat = function(){
+		if(przesuniecieGora===0){
+			$("#naglowek").offset({left:przesuniecieLewo});
+			przesuniecieLewo++;
+		};
+		if (przesuniecieLewo===200) {
+			$("#naglowek").offset({top:przesuniecieGora});
+			przesuniecieGora++;
+		};
+		if (przesuniecieGora===200) {
+			$("#naglowek").offset({left:przesuniecieLewo});
+			przesuniecieLewo--;
+		};
+		if (przesuniecieLewo===0) {
+		$("#naglowek").offset({top:	przesuniecieGora});
+			przesuniecieGora--;
+		};
+	};
+	var klikniecie = 0
+	var czas = 500;
+	var IntervalID = setInterval(kwadrat, czas);
+	
+	$("#naglowek").click( function() {
+		clearInterval(IntervalID);
+		var IntervalID = setInterval(kwadrat, czas);
+		czas = czas/2;
+		klikniecie++;
+		$("#naglowek").text(klikniecie+"/10");
+		
+		if (klikniecie>9) {
+			$("#naglowek").text("Wygrałeś!");
+		};
+	});
+	
+	
+	
+	</script>
+</body>
+</html>
