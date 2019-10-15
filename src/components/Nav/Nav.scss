@@ -1,0 +1,22 @@
+.wrapper {
+    height: 100%;
+}
+
+.navbar {
+    width: 100%;
+    height: 100%;
+    background-color: green
+}
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    padding-top: 100%;
+}
+
+.navbar-list-item > * {
+    text-decoration: none;
+    color: black;
+}

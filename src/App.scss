@@ -1,10 +1,6 @@
 .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .App {
@@ -23,4 +19,3 @@
 .ActiveComponent {
   background-color: yellow;
 }
-/*# sourceMappingURL=App.css.map */
