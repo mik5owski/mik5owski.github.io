@@ -6,15 +6,16 @@ class Nav extends Component {
 
     render() {
         return (
-            <div className="wrapper">
+            <div className="nav-wrapper">
                 <nav className="navbar">
+                    <span className="title">
+                        <NavLink className="name" exact to="/">Mikołaj Piątkowski</NavLink>
+                        <p className="subtitle">/Front-End Developer</p>
+                    </span>
                     <ul className="navbar-list">
+                        <li activeClassName="active" className="navbar-list-item"><NavLink className="home" exact to="/">About</NavLink></li>
                         <li className="navbar-list-item">
-                            <NavLink className="name" exact to="/">Mikołaj Piątkowski</NavLink>
-                        </li>
-                        <li className="navbar-list-item"><NavLink className="home" exact to="/">Home</NavLink></li>
-                        <li className="navbar-list-item">
-                            <NavLink className="projects" exact to="/Projects">Projects</NavLink>
+                            <NavLink activeClassName="active" className="projects" exact to="/Projects">Projects</NavLink>
                         </li>
                         <li className="navbar-list-item">
                             <a className="resume">Résumé</a>
