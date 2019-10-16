@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 
-$backgroundMainColor: white;
-$fontMainColor: black;
-$backgroundHeaderColor: #FAFAFA;
+@import './variables';
 
 * {
   color: $fontMainColor;
@@ -30,6 +28,7 @@ $backgroundHeaderColor: #FAFAFA;
 }
 
 .content {
+  background-color: yellow;
 }
 
 .footer {

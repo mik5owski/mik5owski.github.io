@@ -28,6 +28,10 @@
   background-color: #FAFAFA;
 }
 
+.content {
+  background-color: yellow;
+}
+
 .footer {
   background-color: grey;
 }

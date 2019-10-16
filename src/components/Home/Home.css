@@ -1,0 +1,35 @@
+.home-wrapper {
+  max-width: 924px;
+  display: block;
+  margin: 0 auto;
+  background-color: green;
+}
+
+.image-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 20px;
+}
+
+.photo {
+  width: 100%;
+  max-width: 800px;
+}
+
+.text-wrapper {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.text-wrapper > * {
+  margin: 0;
+  padding: 0;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+/*# sourceMappingURL=Home.css.map */

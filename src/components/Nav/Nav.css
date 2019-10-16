@@ -2,7 +2,7 @@
   height: 100%;
   display: block;
   margin: 0 auto;
-  max-width: 1024px;
+  max-width: 924px;
 }
 
 .navbar {
@@ -23,24 +23,24 @@
   display: flex;
   margin: 0;
   padding: 0;
-  padding-right: 35px;
-  padding-top: 12px;
+  padding-right: 45px;
 }
 
 .navbar-list-item > * {
   text-decoration: none;
+  font-size: 0.8rem;
 }
 
 .name {
   text-decoration: none;
   margin-left: 45px;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .subtitle {
   padding-left: 45px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 500;
   margin: 0;
 }
