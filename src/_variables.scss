@@ -2,6 +2,13 @@
 $backgroundMainColor: white;
 $fontMainColor: black;
 $backgroundHeaderColor: #FAFAFA;
+$activeAndImportantColor: #0068E2;
 
-$leftSideBlankLength: 45px;
-$rightSideBlankLength: 45px;
+$leftSideMargin: 45px;
+$rightSideMargin: 45px;
+
+@mixin maxWidthAndCenter{
+    max-width: 924px;
+    display: block;
+    margin: 0 auto;
+}

@@ -25,11 +25,12 @@
   padding-top: 48px;
   padding-bottom: 16px;
   background-color: $backgroundHeaderColor;
+  position: fixed;
 }
 
-.content {
-  background-color: yellow;
-}
+// .content {
+//   background-color: yellow;
+// }
 
 .footer {
   background-color: grey;

@@ -1,0 +1,7 @@
+@import '../../variables';
+
+.contact-wrapper {
+    @include maxWidthAndCenter();
+    padding-top: 20px;
+    padding-bottom: 80px;
+}

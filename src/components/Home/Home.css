@@ -2,7 +2,6 @@
   max-width: 924px;
   display: block;
   margin: 0 auto;
-  background-color: green;
 }
 
 .image-wrapper {
@@ -18,7 +17,7 @@
 
 .photo {
   width: 100%;
-  max-width: 800px;
+  max-width: 834px;
 }
 
 .text-wrapper {
@@ -31,5 +30,24 @@
   padding: 0;
   padding-left: 45px;
   padding-right: 45px;
+}
+
+h3 {
+  font-weight: 100;
+}
+
+.greeting {
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.important {
+  color: #0068E2;
+}
+
+.about {
+  width: 63%;
+  font-weight: 100;
+  line-height: 30px;
 }
 /*# sourceMappingURL=Home.css.map */

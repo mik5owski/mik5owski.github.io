@@ -1,10 +1,7 @@
 @import '../../variables';
 
 .home-wrapper {
-    max-width: 924px;
-    display: block;
-    margin: 0 auto;
-    background-color: green;
+    @include maxWidthAndCenter();
 }
 
 .image-wrapper {
@@ -16,7 +13,7 @@
 
 .photo {
     width:100%;
-    max-width: 800px;
+    max-width: 834px;
 }
 
 .text-wrapper {
@@ -25,7 +22,45 @@
     & > * {
         margin: 0;
         padding: 0;
-        padding-left: $leftSideBlankLength;
-        padding-right: $rightSideBlankLength;
+        padding-left: $leftSideMargin;
+        padding-right: $rightMargin;
     }
+}
+
+h3 {
+    font-weight: 100
+}
+
+.greeting {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.important {
+    color: $activeAndImportantColor;
+}
+
+.about {
+    width: 63%;
+    font-weight: 100;
+    line-height: 30px;
+}
+
+.hobby-wrapper {
+    width: 100%;
+    max-width: 834px;
+}
+
+.hobby {
+    width: 100%;
+}
+
+.hobby-image-wrapper {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+}
+
+.hobby-image {
+    width:100%;
 }
